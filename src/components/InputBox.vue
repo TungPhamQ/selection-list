@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" class="input-box" placeholder="Chọn tỉnh thành:">
+    <input @click="showList" type="text" class="input-box" placeholder="Chọn tỉnh thành:">
   </div>
 </template>
 
@@ -8,16 +8,21 @@
 export default {
   name: 'InputBox',
   props: {
-
+  },
+  methods:{
+    showList(){
+      this.$emit('showList');
+    }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-input{
+input {
   padding: 0px
 }
+
 .input-box {
   width: 470px;
   height: 48px;
