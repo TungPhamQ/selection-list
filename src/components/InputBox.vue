@@ -1,44 +1,44 @@
 <template>
-  <div>
-    <input @click="showList" type="text" class="input-box" placeholder="Chọn tỉnh thành:">
-  </div>
+    <div>
+        <input @click="toggleList" type="text" class="input-box" placeholder="Chọn tỉnh thành:">
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'InputBox',
-  props: {
-  },
-  methods:{
-    showList(){
-      this.$emit('showList');
+    name: 'InputBox',
+    props: {
+    },
+    methods: {
+        toggleList() {
+            this.$emit('toggleList');
+        }
     }
-  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 input {
-  padding: 0px
+    padding: 0px
 }
 
 .input-box {
-  width: 470px;
-  height: 48px;
-  border: 1px solid #999;
-  border-radius: 4px;
+    width: 470px;
+    height: 48px;
+    border: 1px solid #999;
+    border-radius: 4px;
 
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  padding-left: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 10px;
 }
 
 .input-box:focus {
-  border: 1px solid #007BC3;
-  box-shadow: 0px 0px 8px rgba(0, 123, 195, 0.32);
-  border-radius: 4px;
-  outline: none;
+    border: 1px solid #007BC3;
+    box-shadow: 0px 0px 8px rgba(0, 123, 195, 0.32);
+    border-radius: 4px;
+    outline: none;
 }
 </style>
